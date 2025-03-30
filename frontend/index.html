@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Test Project Task</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -15,6 +16,10 @@
 
 
   <div id="output"></div>
+
+  <div id="loadingIndicator" style="display:none;">
+    <i class="fas fa-spinner fa-spin" style="font-size: 50px;"></i>
+  </div>
 
   <div class="search-bar">
     <span class="search-label">Buscar</span>
@@ -29,9 +34,19 @@
   </header>
   <main>
     <div class="page-title">Order #12345</div>
+
+    <div id="messagePrompt" style="font-size: 16px; color: gray;">
+      Please enter a search keyword to begin.
+    </div>
+
+    <!-- Message when no results are found -->
+    <div id="noResultsMessage" style="display: none;">
+      <p>No results found. Please try again with different keywords.</p>
+    </div>
+
     <div class="content">
       <section>
-        <table>
+        <table id="resultsTable" style="display: none;">
           <thead>
             <tr>
               <th>Product</th>

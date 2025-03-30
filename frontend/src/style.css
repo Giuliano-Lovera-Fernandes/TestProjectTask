@@ -99,7 +99,6 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 50px;
-  /* fundo alterado */
   background-color: #F5F5F5;
 }
 
@@ -108,19 +107,13 @@ button {
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 10px;
-  /* background-color: #FF3A2F; */
   background: rgb(224, 223, 223);
 }
 
-/* Estou alterando a tag body, mas somente o header. */
 * {
   margin: 0;
   padding: 0;
 }
-
-/* body {
-  font-family: sans-serif;
-} */
 
 body>header {
 
@@ -155,12 +148,10 @@ table {
 }
 
 table thead tr {
-  /* border-bottom: 3px solid #eee; alterado*/
   border-bottom: 3px solid #CCCCCC;
 }
 
 table thead tr th {
-  /* antes left */
   text-align: center;
   padding-bottom: 10px;
   text-transform: uppercase;
@@ -170,7 +161,6 @@ table thead tr th {
 
 table tbody tr td {
   padding: 30px 0;
-  /* text-align: center;alterado */
   text-align: center;
 }
 
@@ -182,20 +172,17 @@ table tbody tr {
   display: flex;
   align-items: center;
   margin-top: 0.5em;
-  /* alterado */
   justify-content: center;
 }
 
 .product img {
   border-radius: 6px;
-  /* alterado */
   max-width: 100px;
   height: auto;
 }
 
 .product .info {
   margin-left: 20px;
-  /* alterado */
   text-align: left;
   letter-spacing: 0.5px;
 }
@@ -223,10 +210,8 @@ table tbody tr {
 
 .quantity span {
   margin: 0 10px;
-  /* padding: 0; */
   color: red;
   font-size: 16px;
-
   font-weight: bold;
   display: inline-block;
 }
@@ -247,7 +232,6 @@ table tbody tr {
 
 .quantity button i {
   margin-top: 10px;
-  /* Ajuste o valor conforme necessário */
 }
 
 .quantity button:hover {
@@ -255,14 +239,6 @@ table tbody tr {
 }
 
 .remove {
-  /* background: #eee;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px; */
   background: #eee;
   display: inline-flex;
   padding: 0 0;
@@ -280,27 +256,25 @@ table tbody tr {
 
 .remove button i {
   margin-top: 10px;
-  /* Ajuste o valor conforme necessário */
 }
 
 .remove:hover {
   background: #ddd;
 }
 
-/* Ajusta a largura das colunas */
 th:nth-child(2),
 td:nth-child(2),
-/* Preço */
+/* Price */
 th:nth-child(3),
 td:nth-child(3),
-/* Quantidade */
+/* Quantity */
 th:nth-child(4),
 td:nth-child(4),
 /* Total */
 th:nth-child(5),
 td:nth-child(5)
 
-/* Ações */
+/* Actions */
   {
   width: 15%;
 }
@@ -371,7 +345,6 @@ aside>button:hover {
   left: 50%;
   transform: translateX(-50%);
   background: #333;
-  /* Vermelho alerta */
   color: white;
   padding: 12px 20px;
   border-radius: 5px;
@@ -396,17 +369,14 @@ aside>button:hover {
   background-color: #f44336;
 }
 
-/* Barra de busca com fundo escuro */
 .search-bar {
   background: #040d00;
-  /* Cinza quase preto */
   padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Contêiner do input */
 .search-container {
   display: flex;
   align-items: center;
@@ -414,11 +384,9 @@ aside>button:hover {
   border-radius: 25px;
   padding: 5px 15px;
   width: 38.2%;
-  /* Aproximadamente seguindo a proporção áurea */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Texto "Buscar" dentro da faixa escura */
 .search-label {
   color: white;
   font-size: 18px;
@@ -426,7 +394,6 @@ aside>button:hover {
   font-weight: bold;
 }
 
-/* Input com proporção áurea */
 .search-input {
   flex-grow: 1;
   height: 40px;
@@ -437,19 +404,49 @@ aside>button:hover {
   color: black
 }
 
-
-
-/* Ícone de lupa */
 .search-icon {
   color: #c9c6d9;
-  /* Verde escuro */
   font-size: 20px;
   cursor: pointer;
 }
 
 .search-icon i {
   color: #165B33;
-  /* Verde escuro */
   font-size: 24px;
   cursor: pointer;
+}
+
+#loadingIndicator {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  /* Ensures it appears on top of other elements */
+}
+
+#loadingIndicator i {
+  font-size: 50px;
+  color: #000;
+  /* Black color for the spinner */
+}
+
+#noResultsMessage {
+  font-size: 16px;
+  color: #721c24;
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+  /* Initially hidden */
+}
+
+#noResultsMessage p {
+  margin: 0;
+  padding: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
 }

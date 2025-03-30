@@ -3,10 +3,14 @@ import './style.css'
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   console.log('DOM fully loaded.');
+  const messagePrompt = document.getElementById("messagePrompt");
 
   // Event listener for the fetch button click
   document.getElementById("fetchData").addEventListener("click", async function () {
     console.log("Button clicked. Starting request....");
+
+    // Show loading indicator
+    showLoadingIndicator(true);
 
     // Get the entered keyword and trim whitespace
     const keyword = document.getElementById("keywordInput").value.trim();
@@ -15,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!keyword) {
       showSnackbar('Please enter a keyword!', 'error'); // Show a non-intrusive message
+      showLoadingIndicator(false);
       return;
     }
 
@@ -93,6 +98,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         applyCounterLogic();
 
+        // Hide the "No results" message if products are found
+        document.getElementById("noResultsMessage").style.display = "none";
+        document.getElementById("resultsTable").style.display = "table";
+      }
+      else {
+        document.getElementById("noResultsMessage").style.display = "block";
       }
 
       console.log('Received data: ', data);
@@ -100,6 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (error) {
       console.error('Erro na requisição:', error);
       showSnackbar('Error fetching data!', 'error');
+    } finally {
+      // Hide loading indicator after request completion
+      showLoadingIndicator(false);
+      messagePrompt.style.display = "none";
     }
   });
 });
@@ -142,4 +157,15 @@ function applyCounterLogic() {
     minusBtn.addEventListener('click', () => updateCounter(counter - 1));
     plusBtn.addEventListener('click', () => updateCounter(counter + 1));
   });
+}
+
+// Function to show/hide loading indicator
+function showLoadingIndicator(show) {
+  const loadingElement = document.getElementById("loadingIndicator");
+
+  if (show) {
+    loadingElement.style.display = "block"; // Show loading indicator
+  } else {
+    loadingElement.style.display = "none"; // Hide loading indicator
+  }
 }

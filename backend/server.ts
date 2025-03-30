@@ -1,7 +1,12 @@
+// Importing dotenv library to load environment variables
+import dotenv from "dotenv";
+dotenv.config();  // Loads the variables from the .env file
+
 // Importing required libraries
 import axios from "axios"; // Axios for making HTTP requests - https://axios-http.com/docs/api_intro 
 import express from "express"; // Express for server creation - https://bun.sh/guides/ecosystem/express 
 import cors from "cors"; // CORS middleware for cross-origin requests
+
 
 const jsdom = require("jsdom"); // JSDOM for manipulating HTML documents
 const { JSDOM } = jsdom; // JSDOM for DOM manipulation in Node.js - https://www.npmjs.com/package/jsdom
@@ -50,7 +55,7 @@ router.get('/api/scrape', async (req, res) => {
 
     try {
         const params = {
-            api_key: "",
+            api_key: process.env.API_KEY,
             amazon_domain: "amazon.com",
             type: "search",
             search_term: keyword
