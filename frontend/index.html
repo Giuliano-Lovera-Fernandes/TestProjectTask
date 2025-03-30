@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Project Task</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+
+<body>
+  <!-- <div id="app"></div> -->
+  <h1>E-commerce Search Results</h1>
+
+
+  <div id="output"></div>
+
+  <div class="search-bar">
+    <span class="search-label">Buscar</span>
+    <div class="search-container">
+      <input type="text" id="keywordInput" class="search-input" placeholder="Enter what you're looking for....">
+      <span id="fetchData" class="search-icon"><i class="bx bx-search"></i></span>
+    </div>
+  </div>
+
+  <header>
+    <span>My Shopping Cart</span>
+  </header>
+  <main>
+    <div class="page-title">Order #12345</div>
+    <div class="content">
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Products will be added here via JS  -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+</body>
+
+
+<script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

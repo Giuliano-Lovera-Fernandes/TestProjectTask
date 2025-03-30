@@ -1,0 +1,455 @@
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+  /* fundo alterado */
+  background-color: #F5F5F5;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  /* background-color: #FF3A2F; */
+  background: rgb(224, 223, 223);
+}
+
+/* Estou alterando a tag body, mas somente o header. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  font-family: sans-serif;
+} */
+
+body>header {
+
+  background-color: #343593;
+  color: white;
+  font-size: 24px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center
+}
+
+body>main .page-title {
+  font-size: 40px;
+  padding: 50px 0;
+  text-align: center;
+}
+
+body>main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+}
+
+body>main .content section {
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead tr {
+  /* border-bottom: 3px solid #eee; alterado*/
+  border-bottom: 3px solid #CCCCCC;
+}
+
+table thead tr th {
+  /* antes left */
+  text-align: center;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  color: #666;
+
+}
+
+table tbody tr td {
+  padding: 30px 0;
+  /* text-align: center;alterado */
+  text-align: center;
+}
+
+table tbody tr {
+  border-bottom: 3px solid #eee;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+  /* alterado */
+  justify-content: center;
+}
+
+.product img {
+  border-radius: 6px;
+  /* alterado */
+  max-width: 100px;
+  height: auto;
+}
+
+.product .info {
+  margin-left: 20px;
+  /* alterado */
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.product .info .name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product .info .category {
+  color: #666;
+}
+
+.quantity {
+  background: #eee;
+  display: inline-flex;
+  padding: 0 0;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 30px;
+}
+
+.quantity span {
+  margin: 0 10px;
+  /* padding: 0; */
+  color: red;
+  font-size: 16px;
+
+  font-weight: bold;
+  display: inline-block;
+}
+
+.quantity button {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  padding: 0 0px;
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.quantity button i {
+  margin-top: 10px;
+  /* Ajuste o valor conforme necessário */
+}
+
+.quantity button:hover {
+  background: #ddd;
+}
+
+.remove {
+  /* background: #eee;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px; */
+  background: #eee;
+  display: inline-flex;
+  padding: 0 0;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 30px;
+}
+
+.remove button {
+  border: 0;
+}
+
+.remove button i {
+  margin-top: 10px;
+  /* Ajuste o valor conforme necessário */
+}
+
+.remove:hover {
+  background: #ddd;
+}
+
+/* Ajusta a largura das colunas */
+th:nth-child(2),
+td:nth-child(2),
+/* Preço */
+th:nth-child(3),
+td:nth-child(3),
+/* Quantidade */
+th:nth-child(4),
+td:nth-child(4),
+/* Total */
+th:nth-child(5),
+td:nth-child(5)
+
+/* Ações */
+  {
+  width: 15%;
+}
+
+aside .box {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background: #eee;
+  color: #222;
+}
+
+aside .box header {
+  padding: 15px 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+
+aside .box .details {
+  padding: 20px;
+  font-size: 16px;
+}
+
+aside .box .details>div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+aside .box .details button {
+  color: #ff3a2f;
+  background: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+aside .box footer {
+  padding: 15px 20px;
+  background: #ddd;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+aside button {
+  border: 0;
+  padding: 15px 0;
+  color: white;
+  background: #ff3a2f;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin-top: 1em;
+}
+
+aside>button:hover {
+  background: #3bc55b;
+  cursor: pointer;
+}
+
+.snackbar {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  /* Vermelho alerta */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s, top 0.3s;
+  z-index: 1000;
+}
+
+.snackbar.show {
+  opacity: 0.8;
+  top: 30px;
+}
+
+.snackbar.success {
+  background-color: #4CAF50;
+}
+
+.snackbar.error {
+  background-color: #f44336;
+}
+
+/* Barra de busca com fundo escuro */
+.search-bar {
+  background: #040d00;
+  /* Cinza quase preto */
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contêiner do input */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 25px;
+  padding: 5px 15px;
+  width: 38.2%;
+  /* Aproximadamente seguindo a proporção áurea */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto "Buscar" dentro da faixa escura */
+.search-label {
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Input com proporção áurea */
+.search-input {
+  flex-grow: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0 10px;
+  color: black
+}
+
+
+
+/* Ícone de lupa */
+.search-icon {
+  color: #c9c6d9;
+  /* Verde escuro */
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.search-icon i {
+  color: #165B33;
+  /* Verde escuro */
+  font-size: 24px;
+  cursor: pointer;
+}
